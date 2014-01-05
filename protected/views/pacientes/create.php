@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar Pacientes', 'url'=>array('index')),
+//	array('label'=>'Listar Pacientes', 'url'=>array('index')),
 	array('label'=>'Administrar Pacientes', 'url'=>array('admin')),
 );
 ?>

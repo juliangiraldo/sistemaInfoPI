@@ -8,17 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array(
-        'label'=>'Listar pacientes', 
-        'url'=>array('index')
-        ),
-	array(
-        'label'=>'Crear paciente', 
-        'url'=>array('create'), 
-        array('id'=>'create-pac',
-            'click'=>'js:function(){alert("dasd");}'
-            )
-        ),
+	array('label'=>'Crear Paciente', 'url'=>array('create')),
 );
 
 $this->beginWidget('zii.widgets.jui.CJuiDialog',array(
@@ -91,16 +81,16 @@ o <b>=</b>) al comienzo de cada uno de sus valores de búsqueda para especificar
             'buttons'=>array(
                 'update'=>array(
                     'click'=>'js:function(){                        
-                        $("#pac-frame").attr("src",$(this).attr("href"));
-                        $("#pac-dialog").dialog("open");
-                        return false;
+//                        $("#pac-frame").attr("src",$(this).attr("href"));
+//                        $("#pac-dialog").dialog("open");
+//                        return false;
                     }',
                 ),
                 'view'=>array(
                     'click'=>'js:function(){
-                        $("#pac-frame").attr("src",$(this).attr("href"));
-                        $("#pac-dialog").dialog("open");
-                        return false;
+//                        $("#pac-frame").attr("src",$(this).attr("href"));
+//                        $("#pac-dialog").dialog("open");
+//                        return false;
                     }',
                 ),
             ),

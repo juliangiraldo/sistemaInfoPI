@@ -51,37 +51,85 @@ body.body-color
 	font-size: 200%;
 }
 
-#mainmenu
+#mainmenu 
 {
 	background:white url(bg.gif) repeat-x left top;
+	margin: 2em 0 1em;
 }
 
-#mainmenu ul
+#mainmenu ul ul 
 {
-	padding:6px 20px 5px 20px;
-	margin:0px;
+	display: none;
 }
 
-#mainmenu ul li
+#mainmenu ul li:hover > ul 
 {
-	display: inline;
+	display: block;
 }
 
-#mainmenu ul li a
+#mainmenu ul 
 {
-	color:#ffffff;
-	background-color:transparent;
-	font-size:12px;
-	font-weight:bold;
-	text-decoration:none;
-	padding:5px 8px;
+	display: inline-table;
+	list-style: none;
+	margin: 0;
+	padding: 0 20px;
+	position: relative;
 }
 
-#mainmenu ul li a:hover, #mainmenu ul li.active a
+#mainmenu ul:after 
 {
-	color: #6399cd;
-	background-color:#EFF4FA;
-	text-decoration:none;
+	content: ""; 
+	clear: both; 
+	display: block;
+}
+
+#mainmenu ul li 
+{
+	float: left;
+}
+
+#mainmenu ul li:hover 
+{
+	background: #B7D6E7;
+}
+
+#mainmenu ul li a 
+{
+	color: #FFFFFF; 
+	display: block; 
+	font-weight: bold;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+			
+#mainmenu ul ul 
+{
+	background: #6FACCF; 
+	padding: 0;
+	position: absolute; 
+	top: 100%;
+}
+
+#mainmenu ul ul li 
+{
+	float: none; 
+}
+
+#mainmenu ul ul li a 
+{
+	padding: 5px 20px;
+}	
+
+#mainmenu ul ul li a:hover 
+{
+	background: #B7D6E7;
+}
+		
+#mainmenu ul ul ul 
+{
+	position: absolute; 
+	left: 100%; 
+	top:0;
 }
 
 div.flash-error, div.flash-notice, div.flash-success

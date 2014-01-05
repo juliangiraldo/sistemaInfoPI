@@ -51,7 +51,7 @@ class PacientesController extends Controller
 	 */
 	public function actionView($id)
 	{
-        $this->layout = '//layouts/empty';
+//        $this->layout = '//layouts/empty';
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
@@ -95,7 +95,7 @@ class PacientesController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-        $this->layout = '//layouts/empty';
+//        $this->layout = '//layouts/empty';
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed

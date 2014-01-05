@@ -9,11 +9,11 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
     array('label'=>'Historial psicológico', 'url'=>array('analisis/admin', 'id'=>$model->id_paciente)),
-	array('label'=>'Listar Pacientes', 'url'=>array('index')),
+//	array('label'=>'Listar Pacientes', 'url'=>array('index')),
 	array('label'=>'Crear Paciente', 'url'=>array('create')),
 	array('label'=>'Actualizar Paciente', 'url'=>array('update', 'id'=>$model->id_paciente)),
 	array('label'=>'Administrar Pacientes', 'url'=>array('admin')),
-	array('label'=>'Composición familiar', 'url'=>array('admin/familiares','pac'=>$model->id_paciente)),
+//	array('label'=>'Composición familiar', 'url'=>array('admin/familiares','pac'=>$model->id_paciente)),
 );
 ?>
 

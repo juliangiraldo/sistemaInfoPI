@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Usuarios', 'url'=>array('index')),
+//	array('label'=>'List Usuarios', 'url'=>array('index')),
 	array('label'=>'Create Usuarios', 'url'=>array('create')),
 	array('label'=>'View Usuarios', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Usuarios', 'url'=>array('admin')),
