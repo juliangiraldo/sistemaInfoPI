@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar usuarios', 'url'=>array('index')),
-	array('label'=>'Crear usuarios', 'url'=>array('create')),
+	array('label'=>'Listar Usuario', 'url'=>array('index')),
+	array('label'=>'Crear Usuario', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -47,7 +47,7 @@ or <b>=</b>) al inicio de cada uno de los valores de búsqueda para especificar 
 	'columns'=>array(
 		'id',
 		'username',
-		'password',
+//		'password',
 		'email',
 		array(
 			'class'=>'CButtonColumn',

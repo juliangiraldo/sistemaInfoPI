@@ -55,7 +55,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=psycoinfo',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
 		/**/

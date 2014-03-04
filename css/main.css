@@ -49,12 +49,13 @@ body.body-color
 {
 	padding: 10px 20px;
 	font-size: 200%;
+    float: left;
 }
 
 #mainmenu 
 {
 	background:white url(bg.gif) repeat-x left top;
-	margin: 2em 0 1em;
+	margin: 0em 0 1em;
 }
 
 #mainmenu ul ul 
