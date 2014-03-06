@@ -66,7 +66,8 @@
                                 array('label' => 'Síntomas', 'url' => array('/sintoma/index')),
                                 array('label' => 'Categoría diagnóstico', 'url' => array('/categoriaDiagnostico/index')),
                             ),),
-                        array('label' => 'Configuración', 'url' => array(''), 'visible' => !Yii::app()->user->isGuest,
+                        array('label' => 'Agenda', 'url' => array('/agenda/index'), 'visible' => !Yii::app()->user->isGuest),
+                        array('label' => 'Configuración', 'url' => '#', 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
                                 array('label' => 'Admin usuarios', 'url' => array('/usuario/index')),
                                 array('label' => 'Estados civiles', 'url' => array('/estadoCivil/index')),
@@ -77,7 +78,7 @@
                                 array('label' => 'Ciudades', 'url' => array('/ciudad/index')),
                                 array('label' => 'Departamentos', 'url' => array('/departamento/index')),
                                 array('label' => 'Países', 'url' => array('/pais/index')),
-                            ),),                        
+                            ),),            
                         array('label' => 'Iniciar sesión', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Cerrar sesión (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                     ),

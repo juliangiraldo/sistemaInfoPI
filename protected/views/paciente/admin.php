@@ -3,31 +3,13 @@
 /* @var $model Paciente */
 
 $this->breadcrumbs=array(
-	'Paciente'=>array('index'),
+	'Pacientes'=>array('index'),
 	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'Crear Paciente', 'url'=>array('create')),
+	array('label'=>'Crear paciente', 'url'=>array('create')),
 );
-
-$this->beginWidget('zii.widgets.jui.CJuiDialog',array(
-    'id'=>'pac-dialog',
-    'options'=>array(
-        'title'=>'Paciente',
-        'autoOpen'=>false,
-        'modal'=>'true',
-        'width'=>'800',
-        'height'=>'540',
-        'close'=>'js:function(){  
-            $("#pac-frame").attr("src","");
-        }',
-    ),
-));
-?>
-    <iframe id="pac-frame" width="100%" height="100%"></iframe>
-<?php
-$this->endWidget();
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -43,7 +25,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Administrar Paciente</h1>
+<h1>Administrar pacientes</h1>
 
 <p>
 También puede escribir un operador de comparación (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -77,23 +59,7 @@ o <b>=</b>) al comienzo de cada uno de sus valores de búsqueda para especificar
         ),
 		array(
 			'class'=>'CButtonColumn',
-            'template' => '{view} {update}',
-            'buttons'=>array(
-                'update'=>array(
-                    'click'=>'js:function(){                        
-//                        $("#pac-frame").attr("src",$(this).attr("href"));
-//                        $("#pac-dialog").dialog("open");
-//                        return false;
-                    }',
-                ),
-                'view'=>array(
-                    'click'=>'js:function(){
-//                        $("#pac-frame").attr("src",$(this).attr("href"));
-//                        $("#pac-dialog").dialog("open");
-//                        return false;
-                    }',
-                ),
-            ),
+            'template' => '{view} {update}',            
 		),
 	),
 )); ?>

@@ -3,16 +3,16 @@
 /* @var $model Paciente */
 
 $this->breadcrumbs=array(
-	'Paciente'=>array('index'),
+	'Pacientes'=>array('index'),
 	'Crear',
 );
 
 $this->menu=array(
 //	array('label'=>'Listar Paciente', 'url'=>array('index')),
-	array('label'=>'Administrar Paciente', 'url'=>array('admin')),
+	array('label'=>'Administrar pacientes', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Crear Paciente</h1>
+<h1>Crear paciente</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,16 +3,16 @@
 /* @var $model Paciente */
 
 $this->breadcrumbs=array(
-	'Paciente'=>array('index'),
+	'Pacientes'=>array('index'),
 	$model->nombre.' '.$model->apellido1.' '.$model->apellido2,
 );
 
 $this->menu=array(
-    array('label'=>'Historial psicológico', 'url'=>array('analisis/admin', 'id'=>$model->id_paciente)),
+//    array('label'=>'Historial psicológico', 'url'=>array('analisis/admin', 'id'=>$model->id_paciente)),
 //	array('label'=>'Listar Paciente', 'url'=>array('index')),
-	array('label'=>'Crear Paciente', 'url'=>array('create')),
-	array('label'=>'Actualizar Paciente', 'url'=>array('update', 'id'=>$model->id_paciente)),
-	array('label'=>'Administrar Paciente', 'url'=>array('admin')),
+	array('label'=>'Crear paciente', 'url'=>array('create')),
+	array('label'=>'Actualizar paciente', 'url'=>array('update', 'id'=>$model->id_paciente)),
+	array('label'=>'Administrar pacientes', 'url'=>array('admin')),
 //	array('label'=>'Composición familiar', 'url'=>array('admin/familiares','pac'=>$model->id_paciente)),
 );
 ?>
