@@ -34,18 +34,22 @@
                 $this->widget('zii.widgets.CMenu', array(
                     'items' => array(
                         array('label' => 'Inicio', 'url' => array('/site/index')),
-                        array('label' => 'Pacientes', 'url' => array('/paciente/index'), 'visible' => !Yii::app()->user->isGuest),
-                        array('label' => 'Anamnesis', 'url' => array('/anamnesis/index'), 'visible' => !Yii::app()->user->isGuest),
+                        array('label' => 'Pacientes', 'url' => array('/paciente/index'), 'visible' => !Yii::app()->user->isGuest,
+                            'items' => array(
+                                array('label' => 'Anamnesis', 'url' => array('/anamnesis/index')),
+//                                array('label' => 'Categoría diagnóstico', 'url' => array('/categoriaDiagnostico/index')),
+                            ),),
+//                        array('label' => 'Anamnesis', 'url' => array('/anamnesis/index'), 'visible' => !Yii::app()->user->isGuest),
                         //				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about'), 'visible'=>!Yii::app()->user->isGuest),
                         //				array('label'=>'Contact', 'url'=>array('/site/contact'), 'visible'=>!Yii::app()->user->isGuest),
                         array('label' => 'Diagnósticos', 'url' => array('/diagnostico/index'), 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
-                                array('label' => 'Síntomas', 'url' => array('/sintomas/index')),
+                                array('label' => 'Síntomas', 'url' => array('/sintoma/index')),
                                 array('label' => 'Categoría diagnóstico', 'url' => array('/categoriaDiagnostico/index')),
                             ),),
                         array('label' => 'Configuración clínica', 'url' => array(''), 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
-                                array('label' => 'Antecedentes', 'url' => array('/antecedentes/index')),
+                                array('label' => 'Antecedentes', 'url' => array('/antecedente/index')),
                                 array('label' => 'Deportes', 'url' => array('/deporte/index')),
                                 array('label' => 'Ocupaciones', 'url' => array('/ocupación/index')),
                                 array('label' => 'Cirujías', 'url' => array('/cirujia/index')),
@@ -56,6 +60,11 @@
                                 array('label' => 'Tipo tratamientos', 'url' => array('/tipoTratamiento/index')),
                                 array('label' => 'Tratamientos', 'url' => array('/tratamiento/index')),
                                 array('label' => 'Tipo antecedentes', 'url' => array('/tipoAntecedente/index')),
+                            ),),
+                        array('label' => 'Reportes', 'url' => '#', 'visible' => !Yii::app()->user->isGuest,
+                            'items' => array(
+                                array('label' => 'Síntomas', 'url' => array('/sintoma/index')),
+                                array('label' => 'Categoría diagnóstico', 'url' => array('/categoriaDiagnostico/index')),
                             ),),
                         array('label' => 'Configuración', 'url' => array(''), 'visible' => !Yii::app()->user->isGuest,
                             'items' => array(
@@ -68,7 +77,7 @@
                                 array('label' => 'Ciudades', 'url' => array('/ciudad/index')),
                                 array('label' => 'Departamentos', 'url' => array('/departamento/index')),
                                 array('label' => 'Países', 'url' => array('/pais/index')),
-                            ),),
+                            ),),                        
                         array('label' => 'Iniciar sesión', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
                         array('label' => 'Cerrar sesión (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
                     ),
